@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>KALKULATOR BMI</h2>
+      <p class="description">
+        Body Mass Index (BMI) adalah pengukuran yang digunakan untuk menentukan apakah seseorang memiliki berat badan yang sehat untuk tinggi badannya. Ini adalah alat yang sederhana dan berguna untuk menilai risiko kesehatan terkait berat
+        badan.
+      </p>
+      <label for="gender">Jenis Kelamin:</label>
+      <div class="form-group">
+        <select id="gender">
+          <option value="pria">Pria</option>
+          <option value="wanita">Wanita</option>
+        </select>
+      </div>
+      <label for="age">Usia:</label>
+      <div class="form-group">
+        <input type="number" id="age" placeholder="Masukkan usia" />
+      </div>
+      <label for="weight">Berat Badan (kg):</label>
+      <div class="form-group">
+        <input type="number" id="weight" placeholder="Masukkan berat badan" />
+      </div>
+      <label for="height">Tinggi Badan (cm):</label>
+      <div class="form-group">
+        <input type="number" id="height" placeholder="Masukkan tinggi badan" />
+      </div>
+      <button class="btn-calculate" onclick="calculateBMI()">Hitung BMI</button>
+      <button class="btn-reset" onclick="resetForm()">Reset</button>
+      <div class="result" id="result"></div>
+      <button class="btn-download" onclick="downloadResult()" style="margin-top: 10px">Download hasil BMI</button>
+      <div class="risks" id="risks"></div>
+
+      <h3>Kalori Harian</h3>
+      <label for="activity-level">Tingkat Aktivitas:</label>
+      <div class="form-group">
+        <select id="activity-level">
+          <option value="sedentary">Tidak aktif</option>
+          <option value="light">Ringan (1-3 hari/minggu)</option>
+          <option value="moderate">Sedang (3-5 hari/minggu)</option>
+          <option value="active">Aktif (6-7 hari/minggu)</option>
+          <option value="very-active">Sangat aktif (olahraga intensif)</option>
+        </select>
+      </div>
+      <button class="btn-calculate" onclick="calculateCalories()">Hitung Kalori Harian</button>
+      <div class="calories-result" id="calories-result"></div>
+
+      <div class="suggestions" id="suggestions"></div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
